@@ -63,7 +63,7 @@ var geometry = new THREE.TubeGeometry(path, 300, 1, sides, true);
 //===================================================== Basic material
 var material = new THREE.MeshBasicMaterial({
   side: THREE.BackSide,
-  map: new THREE.TextureLoader().load("/assets/images/bg_texture.png"),
+  map: new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/bg_texture.png"),
 });
 material.map.wrapS = THREE.RepeatWrapping;
 material.map.wrapT = THREE.RepeatWrapping;
@@ -95,7 +95,7 @@ const fragmentShaderKioks = `
   }
 `;
 
-const KioksBg = new THREE.TextureLoader().load("/kiosk_.png");
+const KioksBg = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/kiosk_.png");
 
 const cityGeometryKioks = new THREE.BoxGeometry(4.1, 3, 0.1);
 const cityMaterialKioks = new THREE.ShaderMaterial({
@@ -110,7 +110,7 @@ const cityMaterialKioks = new THREE.ShaderMaterial({
 const Kiosk = new THREE.Mesh(cityGeometryKioks, cityMaterialKioks);
 Kiosk.position.z = -100;
 
-const sparkTexture = new THREE.TextureLoader().load("/static.png");
+const sparkTexture = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/static.png");
 
 // spark4.rotation.set(-0.00009659012301032997, -0.006280995261029449, 0.0014376246587767436)
 let sparkGroup=new THREE.Group();
@@ -152,7 +152,7 @@ const fragmentShader0 = `
   }
 `;
 
-const cityTextureDark = new THREE.TextureLoader().load("/assets/images/model/frame00.png");
+const cityTextureDark = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/model/frame00.png");
 
 const cityGeometry0 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityMaterial0 = new THREE.ShaderMaterial({
@@ -189,7 +189,7 @@ const fragmentShader = `
   }
 `;
 
-const cityTextureLight = new THREE.TextureLoader().load("/assets/images/model/frame0.png");
+const cityTextureLight = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/model/frame0.png");
 
 const cityGeometry1 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityMaterial1 = new THREE.ShaderMaterial({
@@ -208,7 +208,7 @@ city1.scale.set(2.020,1.211)
 
 // CITY GLOW FRAMES
 
-const cityFrameTexture1 = new THREE.TextureLoader().load("/assets/images/model/frame1.png");
+const cityFrameTexture1 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/model/frame1.png");
 const cityFrameGeo1 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial1 = new THREE.ShaderMaterial({
   uniforms: {
@@ -223,7 +223,7 @@ const cityFrame1 = new THREE.Mesh(cityFrameGeo1, cityFrameMaterial1);
 cityFrame1.position.set(0, 0, 8)
 cityFrame1.scale.set(2.020,1.211)
 
-const cityFrameTexture2 = new THREE.TextureLoader().load("/assets/images/model/frame2.png");
+const cityFrameTexture2 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/model/frame2.png");
 const cityFrameGeo2 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial2 = new THREE.ShaderMaterial({
   uniforms: {
@@ -238,7 +238,7 @@ const cityFrame2 = new THREE.Mesh(cityFrameGeo2, cityFrameMaterial2);
 cityFrame2.position.set(0, 0, 8)
 cityFrame2.scale.set(2.020,1.211)
 
-const cityFrameTexture3 = new THREE.TextureLoader().load("/assets/images/model/frame3.png");
+const cityFrameTexture3 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/model/frame3.png");
 const cityFrameGeo3 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial3 = new THREE.ShaderMaterial({
   uniforms: {
@@ -254,7 +254,7 @@ cityFrame3.position.set(0, 0, 8)
 cityFrame3.scale.set(2.020,1.211)
 
 
-const cityFrameTexture4 = new THREE.TextureLoader().load("/assets/images/model/frame4.png");
+const cityFrameTexture4 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/model/frame4.png");
 const cityFrameGeo4 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial4 = new THREE.ShaderMaterial({
   uniforms: {
@@ -270,7 +270,7 @@ cityFrame4.position.set(0, 0, 8)
 cityFrame4.scale.set(2.020,1.211)
 
 
-const cityFrameTexture5 = new THREE.TextureLoader().load("/assets/images/model/frame5.png");
+const cityFrameTexture5 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/model/frame5.png");
 const cityFrameGeo5 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial5 = new THREE.ShaderMaterial({
   uniforms: {
@@ -286,7 +286,7 @@ cityFrame5.position.set(0, 0, 8)
 cityFrame5.scale.set(2.020,1.211)
 
 
-const cityFrameTexture6 = new THREE.TextureLoader().load("/assets/images/model/frame6.png");
+const cityFrameTexture6 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/model/frame6.png");
 const cityFrameGeo6 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial6 = new THREE.ShaderMaterial({
   uniforms: {
@@ -302,7 +302,7 @@ cityFrame6.position.set(0, 0, 8)
 cityFrame6.scale.set(2.020,1.211)
 
 
-const cityFrameTexture7 = new THREE.TextureLoader().load("/assets/images/model/frame7.png");
+const cityFrameTexture7 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.1/assets/images/model/frame7.png");
 const cityFrameGeo7 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial7 = new THREE.ShaderMaterial({
   uniforms: {
