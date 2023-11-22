@@ -59,7 +59,7 @@ var points = [new THREE.Vector3(0, 0, -100), new THREE.Vector3(0, 0, 0)];
 var path = new THREE.CatmullRomCurve3(points);
 //===================================================== Create the tube geometry from the path
 var sides = 30;
-var geometry = new THREE.TubeGeometry(path, 300, 1, sides, true);
+var geometry = new THREE.TubeGeometry(path, 300, 0.7, sides, true);
 
 //===================================================== Basic material
 var material = new THREE.MeshBasicMaterial({
@@ -166,7 +166,7 @@ const cityMaterial0 = new THREE.ShaderMaterial({
   transparent: true,
 });
 const city = new THREE.Mesh(cityGeometry0, cityMaterial0);
-city.position.set(0, 0, 8)
+city.position.set(0, 0, 15)
 city.scale.set(2.020,1.211)
 
 
@@ -204,7 +204,7 @@ const cityMaterial1 = new THREE.ShaderMaterial({
 });
 
 const city1 = new THREE.Mesh(cityGeometry1, cityMaterial1);
-city1.position.set(0, 0, 8)
+city1.position.set(0, 0, 15)
 city1.scale.set(2.020,1.211)
 
 // CITY GLOW FRAMES
@@ -221,7 +221,7 @@ const cityFrameMaterial1 = new THREE.ShaderMaterial({
   transparent: true,
 });
 const cityFrame1 = new THREE.Mesh(cityFrameGeo1, cityFrameMaterial1);
-cityFrame1.position.set(0, 0, 8)
+cityFrame1.position.set(0, 0, 15)
 cityFrame1.scale.set(2.020,1.211)
 
 const cityFrameTexture2 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame2.png");
@@ -236,7 +236,7 @@ const cityFrameMaterial2 = new THREE.ShaderMaterial({
   transparent: true,
 });
 const cityFrame2 = new THREE.Mesh(cityFrameGeo2, cityFrameMaterial2);
-cityFrame2.position.set(0, 0, 8)
+cityFrame2.position.set(0, 0, 15)
 cityFrame2.scale.set(2.020,1.211)
 
 const cityFrameTexture3 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame3.png");
@@ -251,7 +251,7 @@ const cityFrameMaterial3 = new THREE.ShaderMaterial({
   transparent: true,
 });
 const cityFrame3 = new THREE.Mesh(cityFrameGeo3, cityFrameMaterial3);
-cityFrame3.position.set(0, 0, 8)
+cityFrame3.position.set(0, 0, 15)
 cityFrame3.scale.set(2.020,1.211)
 
 
@@ -267,7 +267,7 @@ const cityFrameMaterial4 = new THREE.ShaderMaterial({
   transparent: true,
 });
 const cityFrame4 = new THREE.Mesh(cityFrameGeo4, cityFrameMaterial4);
-cityFrame4.position.set(0, 0, 8)
+cityFrame4.position.set(0, 0, 15)
 cityFrame4.scale.set(2.020,1.211)
 
 
@@ -283,7 +283,7 @@ const cityFrameMaterial5 = new THREE.ShaderMaterial({
   transparent: true,
 });
 const cityFrame5 = new THREE.Mesh(cityFrameGeo5, cityFrameMaterial5);
-cityFrame5.position.set(0, 0, 8)
+cityFrame5.position.set(0, 0, 15)
 cityFrame5.scale.set(2.020,1.211)
 
 
@@ -299,7 +299,7 @@ const cityFrameMaterial6 = new THREE.ShaderMaterial({
   transparent: true,
 });
 const cityFrame6 = new THREE.Mesh(cityFrameGeo6, cityFrameMaterial6);
-cityFrame6.position.set(0, 0, 8)
+cityFrame6.position.set(0, 0, 15)
 cityFrame6.scale.set(2.020,1.211)
 
 
@@ -315,7 +315,7 @@ const cityFrameMaterial7 = new THREE.ShaderMaterial({
   transparent: true,
 });
 const cityFrame7 = new THREE.Mesh(cityFrameGeo7, cityFrameMaterial7);
-cityFrame7.position.set(0, 0, 8)
+cityFrame7.position.set(0, 0, 15)
 cityFrame7.scale.set(2.020,1.211)
 
 
@@ -328,28 +328,32 @@ var ambientLight = new THREE.AmbientLight("#ffffff",10); // The color of the lig
 scene.add(ambientLight, light);
 
 //===================================================== Animate
-let z1=5;
-let z2=3;
+let z1=12;
+let z2=10;
 
 console.log("window.innerWidth",window.innerWidth);
 if(window.innerWidth>1024){
-  z1=5;
-  z2=3;
+  z1=12;
+  z2=10;
 }else if(window.innerWidth>=992){
-  z1=3;
-  z2=1;
+  z1=10;
+  z2=8;
 }else if(window.innerWidth>=768){
-  z1=2;
-  z2=-2;
+  z1=9;
+  z2=7;
+  Kiosk.scale.set(0.8,0.8)
 }else if(window.innerWidth>=576){
-  z1=2;
-  z2=-2;
+  z1=9;
+  z2=7;
+  Kiosk.scale.set(0.7,0.7)
 }else if(window.innerWidth>=480){
-  z1=2;
-  z2=-4;
+  z1=8.5;
+  z2=5;
+  Kiosk.scale.set(0.6,0.6)
 }else if(window.innerWidth>=200){
-  z1=1.8;
-  z2=-6;
+  z1=7;
+  z2=1.8;
+  Kiosk.scale.set(0.6,0.6)
 }
 
 
@@ -473,15 +477,8 @@ function WhooshAudio() {
 }
 
 let x =0;
-window.addEventListener("wheel", function(){
-  if(x==0){
-    start();
-    x++;
-  }
-})
-window.addEventListener("touchmove", function(){
-  if(x==0){
-    start();
-    x++;
-  }
+let btnAudioPlay=document.querySelector(".btnAudioPlay");
+btnAudioPlay.addEventListener("click",()=>{
+  console.log("click");
+  start();
 })
