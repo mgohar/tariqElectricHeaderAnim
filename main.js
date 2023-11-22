@@ -406,27 +406,27 @@ document.addEventListener("keyup", (event) => {
 
 // Function to update the camera's position based on user input
 function updateCameraPosition() {
-  const cameraSpeed = 0.1; // Adjust the speed as needed
+  // const cameraSpeed = 0.1; // Adjust the speed as needed
 
-  if (keyboardState["ArrowUp"]) {
-    camera.position.z -= cameraSpeed;
-  }
-  if (keyboardState["ArrowDown"]) {
-    camera.position.z += cameraSpeed;
-  }
-  if (keyboardState["ArrowLeft"]) {
-    camera.position.y -= cameraSpeed;
-  }
-  if (keyboardState["ArrowRight"]) {
-    camera.position.y += cameraSpeed;
-  }
-  if (keyboardState["w"]) {
-    camera.rotation.x += cameraSpeed * 0.02;
-  }
+  // if (keyboardState["ArrowUp"]) {
+  //   camera.position.z -= cameraSpeed;
+  // }
+  // if (keyboardState["ArrowDown"]) {
+  //   camera.position.z += cameraSpeed;
+  // }
+  // if (keyboardState["ArrowLeft"]) {
+  //   camera.position.y -= cameraSpeed;
+  // }
+  // if (keyboardState["ArrowRight"]) {
+  //   camera.position.y += cameraSpeed;
+  // }
+  // if (keyboardState["w"]) {
+  //   camera.rotation.x += cameraSpeed * 0.02;
+  // }
 
-  if (keyboardState["s"]) {
-    camera.rotation.x -= cameraSpeed * 0.02;
-  }
+  // if (keyboardState["s"]) {
+  //   camera.rotation.x -= cameraSpeed * 0.02;
+  // }
 
   // You can add more controls for other directions or actions as needed
 }
@@ -477,7 +477,7 @@ function WhooshAudio() {
 }
 
 let x =0;
-let btnAudioPlay=document.querySelector(".btnAudioPlay");
+let btnAudioPlay=document.querySelector(".btn_audio_play");
 btnAudioPlay.addEventListener("click",()=>{
   console.log("click");
   start();
