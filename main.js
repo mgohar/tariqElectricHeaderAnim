@@ -374,7 +374,9 @@ const start=()=>{
   .to(cityFrame4.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
   .to(cityFrame5.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
   .to(cityFrame6.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
-  .to(cityFrame7.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}});
+  .to(cityFrame7.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onComplete:()=>{
+    document.body.style.overflow = 'visible';
+  },onStart:()=>{LightAudio()}});
 }
 
 
