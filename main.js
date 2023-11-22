@@ -479,6 +479,21 @@ function WhooshAudio() {
 let x =0;
 let btnAudioPlay=document.querySelector(".btn_audio_play");
 btnAudioPlay.addEventListener("click",()=>{
-  console.log("click");
-  start();
+  if(x==0){
+    start();
+    x++;
+  }
+})
+window.addEventListener("wheel", function(){
+  if(x==0){
+    start();
+    x++;
+  }
+  
+})
+window.addEventListener("touchmove", function(){
+  if(x==0){
+    start();
+    x++;
+  }
 })
