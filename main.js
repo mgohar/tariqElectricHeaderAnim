@@ -43,7 +43,8 @@ camera.position.z = -104;
 
 //===================================================== Orbit Controls
 const orbitControls = new OrbitControls(camera, canvas);
-orbitControls.enableDamping = true;
+orbitControls.enabled=false
+// orbitControls.enableDamping = true;
 //===================================================== resize
 window.addEventListener("resize", function () {
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -354,21 +355,24 @@ if(window.innerWidth>1024){
 
 
 var exploid = false;
-var tl = gsap.timeline();
-tl.to(camera.position,{z:-104.5,duration:1.1,delay:1,ease: "power1.inOut"})
-.to(camera.position,{z:z1,y:-0.6,duration:6,ease: "power3.inOut",onStart:()=>{WhooshAudio()}})
-.to(camera.position,{z:z2,y:0,duration:1,ease: "power3.inOut"})
-gsap.to(sparkGroup.position,{z:180,y:-0.7,duration:5, delay:5.5,ease: "power2.outIn"})
+const start=()=>{
+  var tl = gsap.timeline();
+  tl.to(camera.position,{z:-104.5,duration:1.1,delay:1,ease: "power1.inOut"})
+  .to(camera.position,{z:z1,y:-0.6,duration:6,ease: "power3.inOut",onStart:()=>{WhooshAudio()}})
+  .to(camera.position,{z:z2,y:0,duration:1,ease: "power3.inOut"})
+  gsap.to(sparkGroup.position,{z:180,y:-0.7,duration:5, delay:5.5,ease: "power2.outIn"})
 
-tl.to(city.material.uniforms.opacity, {value: 0,duration: 0.4,ease: "power1.outIn",},"+=1")
-.to(city1.material.uniforms.opacity, {value: 1,duration: 0.8,ease: "power1.outIn",onComplete:()=>{LightAudio()}},"-=2")
-.to(cityFrame1.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}},"-=0.5")
-.to(cityFrame2.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
-.to(cityFrame3.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
-.to(cityFrame4.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
-.to(cityFrame5.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
-.to(cityFrame6.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
-.to(cityFrame7.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}});
+  tl.to(city.material.uniforms.opacity, {value: 0,duration: 0.4,ease: "power1.outIn",},"+=1")
+  .to(city1.material.uniforms.opacity, {value: 1,duration: 0.8,ease: "power1.outIn",onComplete:()=>{LightAudio()}},"-=2")
+  .to(cityFrame1.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}},"-=0.5")
+  .to(cityFrame2.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
+  .to(cityFrame3.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
+  .to(cityFrame4.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
+  .to(cityFrame5.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
+  .to(cityFrame6.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}})
+  .to(cityFrame7.material.uniforms.opacity, {value: 1,duration: 0.4 ,ease: "power1.outIn",onStart:()=>{LightAudio()}});
+}
+
 
 
 
@@ -425,35 +429,35 @@ function updateCameraPosition() {
 
 // TransformControls
 
-function TControl(name,type="P") {
-  let tControl = new TransformControls(camera, renderer.domElement);
-  tControl.addEventListener("dragging-changed", (event) => {
-    orbitControls.enabled = !event.value;
-  });
-  tControl.attach(name);
-  scene.add(tControl);
+// function TControl(name,type="P") {
+//   let tControl = new TransformControls(camera, renderer.domElement);
+//   tControl.addEventListener("dragging-changed", (event) => {
+//     orbitControls.enabled = !event.value;
+//   });
+//   tControl.attach(name);
+//   scene.add(tControl);
   
-  tControl.addEventListener("change", () => {
-    // The object's position has changed
-    const newPosition = name.position;
-    const newRotate = name.rotation;
-    const newScale = name.scale;
+//   tControl.addEventListener("change", () => {
+//     // The object's position has changed
+//     const newPosition = name.position;
+//     const newRotate = name.rotation;
+//     const newScale = name.scale;
 
-    if(type=="R"){
-      tControl.setMode("rotate")
-      console.log("New Rotation:", newRotate)
-    }else if(type=="S"){
-      tControl.setMode("scale")
-      console.log("New Scale:", newScale)
-    }else{
-      tControl.setMode("translate")
-      console.log("New Position:", newPosition)
-    }
+//     if(type=="R"){
+//       tControl.setMode("rotate")
+//       console.log("New Rotation:", newRotate)
+//     }else if(type=="S"){
+//       tControl.setMode("scale")
+//       console.log("New Scale:", newScale)
+//     }else{
+//       tControl.setMode("translate")
+//       console.log("New Position:", newPosition)
+//     }
   
-  });
+//   });
 
 
-}
+// }
 
 
 function LightAudio() {
@@ -467,3 +471,17 @@ function WhooshAudio() {
     audio.play();
   }, 1500);
 }
+
+let x =0;
+window.addEventListener("wheel", function(){
+  if(x==0){
+    start();
+    x++;
+  }
+})
+window.addEventListener("touchmove", function(){
+  if(x==0){
+    start();
+    x++;
+  }
+})
