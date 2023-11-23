@@ -64,7 +64,7 @@ var geometry = new THREE.TubeGeometry(path, 300, 0.7, sides, true);
 //===================================================== Basic material
 var material = new THREE.MeshBasicMaterial({
   side: THREE.BackSide,
-  map: new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/bg_texture.webp"),
+  map: new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/bg_texture.webp"),
 });
 material.map.wrapS = THREE.RepeatWrapping;
 material.map.wrapT = THREE.RepeatWrapping;
@@ -96,7 +96,7 @@ const fragmentShaderKioks = `
   }
 `;
 
-const KioksBg = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/kiosk_.webp");
+const KioksBg = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/kiosk_.webp");
 
 const cityGeometryKioks = new THREE.BoxGeometry(4.1, 3, 0.1);
 const cityMaterialKioks = new THREE.ShaderMaterial({
@@ -111,7 +111,7 @@ const cityMaterialKioks = new THREE.ShaderMaterial({
 const Kiosk = new THREE.Mesh(cityGeometryKioks, cityMaterialKioks);
 Kiosk.position.z = -100;
 
-const sparkTexture = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/static.webp");
+const sparkTexture = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/static.webp");
 
 // spark4.rotation.set(-0.00009659012301032997, -0.006280995261029449, 0.0014376246587767436)
 let sparkGroup=new THREE.Group();
@@ -153,7 +153,7 @@ const fragmentShader0 = `
   }
 `;
 
-const cityTextureDark = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame00.webp");
+const cityTextureDark = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/model/frame00.webp");
 
 const cityGeometry0 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityMaterial0 = new THREE.ShaderMaterial({
@@ -190,7 +190,7 @@ const fragmentShader = `
   }
 `;
 
-const cityTextureLight = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame0.webp");
+const cityTextureLight = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/model/frame0.webp");
 
 const cityGeometry1 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityMaterial1 = new THREE.ShaderMaterial({
@@ -209,7 +209,7 @@ city1.scale.set(2.020,1.211)
 
 // CITY GLOW FRAMES
 
-const cityFrameTexture1 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame1.webp");
+const cityFrameTexture1 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/model/frame1.webp");
 const cityFrameGeo1 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial1 = new THREE.ShaderMaterial({
   uniforms: {
@@ -224,7 +224,7 @@ const cityFrame1 = new THREE.Mesh(cityFrameGeo1, cityFrameMaterial1);
 cityFrame1.position.set(0, 0, 15)
 cityFrame1.scale.set(2.020,1.211)
 
-const cityFrameTexture2 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame2.webp");
+const cityFrameTexture2 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/model/frame2.webp");
 const cityFrameGeo2 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial2 = new THREE.ShaderMaterial({
   uniforms: {
@@ -239,7 +239,7 @@ const cityFrame2 = new THREE.Mesh(cityFrameGeo2, cityFrameMaterial2);
 cityFrame2.position.set(0, 0, 15)
 cityFrame2.scale.set(2.020,1.211)
 
-const cityFrameTexture3 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame3.webp");
+const cityFrameTexture3 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/model/frame3.webp");
 const cityFrameGeo3 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial3 = new THREE.ShaderMaterial({
   uniforms: {
@@ -255,7 +255,7 @@ cityFrame3.position.set(0, 0, 15)
 cityFrame3.scale.set(2.020,1.211)
 
 
-const cityFrameTexture4 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame4.webp");
+const cityFrameTexture4 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/model/frame4.webp");
 const cityFrameGeo4 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial4 = new THREE.ShaderMaterial({
   uniforms: {
@@ -271,7 +271,7 @@ cityFrame4.position.set(0, 0, 15)
 cityFrame4.scale.set(2.020,1.211)
 
 
-const cityFrameTexture5 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame5.webp");
+const cityFrameTexture5 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/model/frame5.webp");
 const cityFrameGeo5 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial5 = new THREE.ShaderMaterial({
   uniforms: {
@@ -287,7 +287,7 @@ cityFrame5.position.set(0, 0, 15)
 cityFrame5.scale.set(2.020,1.211)
 
 
-const cityFrameTexture6 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame6.webp");
+const cityFrameTexture6 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/model/frame6.webp");
 const cityFrameGeo6 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial6 = new THREE.ShaderMaterial({
   uniforms: {
@@ -303,7 +303,7 @@ cityFrame6.position.set(0, 0, 15)
 cityFrame6.scale.set(2.020,1.211)
 
 
-const cityFrameTexture7 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.3/assets/images/model/frame7.webp");
+const cityFrameTexture7 = new THREE.TextureLoader().load("https://cdn.jsdelivr.net/gh/mgohar/tariqElectricHeaderAnim@0.0.9/assets/images/model/frame7.webp");
 const cityFrameGeo7 = new THREE.BoxGeometry(3, 3, 0.1);
 const cityFrameMaterial7 = new THREE.ShaderMaterial({
   uniforms: {
