@@ -468,7 +468,7 @@ function updateCameraPosition() {
 
 function LightAudio() {
   var audio = document.getElementById("LightAudio");
-  audio.play();
+  // audio.play();
 }
 
 function WhooshAudio() {
